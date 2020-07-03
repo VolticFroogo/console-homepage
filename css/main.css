@@ -1,0 +1,57 @@
+html {
+    color: white;
+    background-color: #111111;
+    font-size: 15px;
+    font-family: Consolas, serif;
+}
+
+#console {
+    width: 40vw;
+    height: 40vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#messages {
+    margin: 0;
+    padding: 0;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+#messages li {
+    list-style: none;
+    text-align: justify;
+    font-family: Consolas, serif;
+    font-size: 15px;
+}
+
+#messages li.marginTop {
+    margin-top: 15px;
+}
+
+#messages li.marginBottom {
+    margin-bottom: 15px;
+}
+
+label[for=textbox] {
+
+}
+
+#textbox {
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-family: Consolas, serif;
+    font-size: 15px;
+}
