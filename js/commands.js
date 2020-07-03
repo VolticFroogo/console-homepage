@@ -20,6 +20,11 @@ const commands = [
         func: github,
     },
     {
+        name: 'contact',
+        description: 'Find out a few ways to contact me.',
+        func: contact,
+    },
+    {
         name: 'clear',
         description: 'Clear the console.',
         func: clear,
