@@ -17,11 +17,16 @@ $('#textbox').keydown(function(event) {
 });
 
 function command(cmd) {
-    commands.some(function(command) {
+    const found = commands.some(function(command) {
         if (!cmd.startsWith(command.name))
             return false;
 
         command.func(cmd);
         return true;
     });
+
+    if (!found) {
+        message('Unknown command \'' + cmd + '\'.');
+        message('Try typing \'help\' into the console for a list of commands, or simply click on one of the options below.', margins.BOTTOM);
+    }
 }
