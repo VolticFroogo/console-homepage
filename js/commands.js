@@ -15,6 +15,11 @@ const commands = [
         func: projects,
     },
     {
+        name: 'github',
+        description: 'Check out my GitHub profile.',
+        func: github,
+    },
+    {
         name: 'clear',
         description: 'Clear the console.',
         func: clear,
@@ -35,6 +40,11 @@ function who() {
     message('I am Harry (or Froogo), a software developer residing in The United Kingdom. ' +
         'As you can see with this site, I mostly make useless stuff. ' +
         'If you want to see some of my projects, try the \'projects\' command.', margins.BOTTOM);
+}
+
+function github() {
+    messageURL('Check out my GitHub @VolticFroogo.', 'https://github.com/VolticFroogo');
+    message('To take a look at some of my projects on here, try the \'projects\' command.', margins.BOTTOM);
 }
 
 function clear() {

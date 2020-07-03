@@ -68,4 +68,6 @@ function projects() {
 
         message(' ', margins.BOTTOM);
     });
+
+    message('To find my GitHub with more of my projects, try the \'github\' command.', margins.BOTTOM);
 }
