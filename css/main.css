@@ -75,7 +75,7 @@ label[for=textbox] {
 }
 
 #textbox {
-    width: calc(100% - 17px);
+    width: calc(100% - 30px);
     margin: 0;
     padding: 0;
 
