@@ -2,7 +2,7 @@ html {
     color: white;
     background-color: #111111;
     font-size: 15px;
-    font-family: Consolas, serif;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
 }
 
 a {
@@ -45,7 +45,7 @@ a {
 
 #messages li {
     list-style: none;
-    font-family: Consolas, serif;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
     font-size: 15px;
 }
 
@@ -84,7 +84,7 @@ label[for=textbox] {
     outline: none;
 
     color: white;
-    font-family: Consolas, serif;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
     font-size: 15px;
 }
 
