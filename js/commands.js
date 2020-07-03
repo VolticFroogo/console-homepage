@@ -13,7 +13,12 @@ const commands = [
         name: 'projects',
         description: 'Take a look at some of my projects.',
         func: projects,
-    }
+    },
+    {
+        name: 'clear',
+        description: 'Clear the console.',
+        func: clear,
+    },
 ];
 
 function help() {
@@ -30,4 +35,8 @@ function who() {
     message('I am Harry (or Froogo), a software developer residing in The United Kingdom. ' +
         'As you can see with this site, I mostly make useless stuff. ' +
         'If you want to see some of my projects, try the \'projects\' command.', margins.BOTTOM);
+}
+
+function clear() {
+    $('#messages').empty();
 }
