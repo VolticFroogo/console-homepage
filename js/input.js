@@ -26,12 +26,12 @@ $('#options').on('click', 'li', async function() {
 
     while (textbox.val().length !== 0) {
         textbox.val(textbox.val().slice(0, -1));
-        await sleep(120);
+        await sleep(50);
     }
 
     for (let i = 0; i < cmd.length; i++) {
         textbox.val(textbox.val() + cmd[i]);
-        await sleep(200);
+        await sleep(100);
     }
 
     command(cmd);

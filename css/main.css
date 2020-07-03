@@ -5,9 +5,13 @@ html {
     font-family: Consolas, serif;
 }
 
+a {
+    color: white;
+}
+
 #console {
     width: 40vw;
-    height: 40vh;
+    height: 60vh;
 
     position: absolute;
     top: 50%;
@@ -20,7 +24,7 @@ html {
 #messages {
     margin: 0;
     padding: 0;
-    max-height: 40vh;
+    max-height: 60vh;
     overflow: hidden;
 }
 

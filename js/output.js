@@ -7,11 +7,7 @@ function registerOptions() {
     });
 }
 
-function message(message, margin = 0) {
-    // Create the ul with the specified message.
-    let li = document.createElement('li');
-    li.appendChild(document.createTextNode(message));
-
+function appendMessage(li, margin) {
     // Apply classes using the bitmask specified in margin.
     if (margin & margins.BOTTOM)
         li.className += ' marginBottom';
@@ -26,6 +22,27 @@ function message(message, margin = 0) {
     // Scroll to the bottom of the ul.
     const messagesDOM = messages[0];
     messagesDOM.scrollTop = messagesDOM.scrollHeight;
+}
+
+function message(message, margin = 0) {
+    // Create the li with the specified message.
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(message));
+
+    appendMessage(li, margin);
+}
+
+function messageURL(message, url, margin = 0) {
+    let a = document.createElement('a');
+    a.appendChild(document.createTextNode(message));
+    a.target = '_blank';
+    a.href = url;
+
+    // Create the li with the specified message.
+    let li = document.createElement('li');
+    li.appendChild(a);
+
+    appendMessage(li, margin);
 }
 
 async function intro() {
