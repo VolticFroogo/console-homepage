@@ -28,6 +28,17 @@ a {
     overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+    #console {
+        width: 80vw;
+        height: 70vh;
+    }
+
+    #messages {
+        max-height: 70vh;
+    }
+}
+
 #messages li {
     list-style: none;
     font-family: Consolas, serif;
@@ -66,7 +77,7 @@ label[for=textbox] {
 }
 
 #options li {
-    margin: 0 0 0 15px;
+    margin: 0 0 10px 15px;
     padding: 5px;
     list-style: none;
     color: #111111;
