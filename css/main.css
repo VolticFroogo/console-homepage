@@ -30,7 +30,6 @@ a {
 
 #messages li {
     list-style: none;
-    text-align: justify;
     font-family: Consolas, serif;
     font-size: 15px;
 }
