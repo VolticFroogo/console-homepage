@@ -44,6 +44,7 @@ label[for=textbox] {
 }
 
 #textbox {
+    width: calc(100% - 17px);
     margin: 0;
     padding: 0;
 
@@ -54,4 +55,22 @@ label[for=textbox] {
     color: white;
     font-family: Consolas, serif;
     font-size: 15px;
+}
+
+#options {
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+#options li {
+    margin: 0 0 0 15px;
+    padding: 5px;
+    list-style: none;
+    color: #111111;
+    background-color: white;
+    float: left;
+}
+
+#options li:hover {
+    cursor: pointer;
 }

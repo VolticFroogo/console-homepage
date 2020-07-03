@@ -1,3 +1,12 @@
+function registerOptions() {
+    commands.forEach(function(command) {
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(command.name));
+
+        $('#options').append(li);
+    });
+}
+
 function message(message, margin = 0) {
     // Create the ul with the specified message.
     let li = document.createElement('li');
@@ -20,9 +29,6 @@ function message(message, margin = 0) {
 }
 
 async function intro() {
-    const text = $('#text');
-    text.hide();
-
     message('Initialising virtual machine...', margins.BOTTOM);
     await sleep(1000);
 
@@ -37,7 +43,8 @@ async function intro() {
     message('Type \'help\' into the console for a list of commands, or simply click on one of the options below.');
     message(' ', margins.BOTTOM);
 
-    text.show();
+    $('#text').show();
+    $('#options').show();
     $('#textbox').focus();
 }
 
