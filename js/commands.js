@@ -10,6 +10,11 @@ const commands = [
         func: who,
     },
     {
+        name: 'technology',
+        description: 'Get to know some of the technologies I use.',
+        func: technology,
+    },
+    {
         name: 'projects',
         description: 'Take a look at some of my projects.',
         func: projects,
@@ -43,6 +48,7 @@ function help() {
 
 function who() {
     message('I am Harry (or Froogo), a software developer residing in The United Kingdom. ' +
+        'If you\'re interested in the kind of technologies I use, try the \'technology\' command. ' +
         'As you can see with this site, I mostly make useless stuff. ' +
         'If you want to see some of my projects, try the \'projects\' command.', margins.BOTTOM);
 }
