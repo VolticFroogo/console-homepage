@@ -10,10 +10,10 @@ function registerOptions() {
 function appendMessage(li, margin) {
     // Apply classes using the bitmask specified in margin.
     if (margin & margins.BOTTOM)
-        li.className += ' marginBottom';
+        li.classList.add('marginBottom');
 
     if (margin & margins.TOP)
-        li.className += ' marginTop';
+        li.classList.add('marginTop');
 
     // Append the li to the messages ul.
     const messages = $('#messages');
