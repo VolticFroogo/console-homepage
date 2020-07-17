@@ -1,9 +1,11 @@
 function registerOptions() {
+    const options = document.getElementById('options');
+
     commands.forEach(function(command) {
         let li = document.createElement('li');
         li.appendChild(document.createTextNode(command.name));
 
-        $('#options').append(li);
+        options.append(li);
     });
 }
 
@@ -16,12 +18,11 @@ function appendMessage(li, margin) {
         li.classList.add('marginTop');
 
     // Append the li to the messages ul.
-    const messages = $('#messages');
+    const messages = document.getElementById('messages');
     messages.append(li);
 
     // Scroll to the bottom of the ul.
-    const messagesDOM = messages[0];
-    messagesDOM.scrollTop = messagesDOM.scrollHeight;
+    messages.scrollTop = messages.scrollHeight;
 }
 
 function message(message, margin = 0) {
@@ -60,9 +61,9 @@ async function intro() {
     message('Type \'help\' into the console for a list of commands, or simply click on one of the options below.');
     message(' ', margins.BOTTOM);
 
-    $('#text').show();
-    $('#options').show();
-    $('#textbox').focus();
+    document.getElementById('text').hidden = false;
+    document.getElementById('options').hidden = false;
+    document.getElementById('textbox').focus();
 }
 
 async function check(name) {

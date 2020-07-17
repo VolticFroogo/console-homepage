@@ -59,5 +59,5 @@ function github() {
 }
 
 function clear() {
-    $('#messages').empty();
+    document.getElementById('messages').innerHTML = '';
 }

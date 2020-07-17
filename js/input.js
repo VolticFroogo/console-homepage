@@ -1,36 +1,39 @@
 let typing = false;
 
-$('#textbox').blur(function() {
-    this.focus();
+document.getElementById('textbox').addEventListener('blur', event => {
+    event.target.focus();
 });
 
-$('#textbox').keydown(function(event) {
+document.getElementById('textbox').addEventListener('keydown', event => {
     if (typing)
         event.preventDefault();
 
     // If they didn't press enter, return.
-    if (event.keyCode !== 13)
+    if (event.code !== 'Enter')
         return;
 
-    command($('#textbox').val());
+    command(event.target.value);
 });
 
-$('#options').on('click', 'li', async function() {
+document.getElementById('options').addEventListener('click', async (event) => {
+    if (!event.target.matches('li'))
+        return;
+
     if (typing)
         return;
 
     typing = true;
 
-    const cmd = this.innerText;
-    const textbox = $('#textbox');
+    const cmd = event.target.innerText;
+    const textbox = document.getElementById('textbox');
 
-    while (textbox.val().length !== 0) {
-        textbox.val(textbox.val().slice(0, -1));
+    while (textbox.value.length !== 0) {
+        textbox.value = textbox.value.slice(0, -1);
         await sleep(50);
     }
 
     for (let i = 0; i < cmd.length; i++) {
-        textbox.val(textbox.val() + cmd[i]);
+        textbox.value += cmd[i];
         await sleep(100);
     }
 
@@ -40,7 +43,7 @@ $('#options').on('click', 'li', async function() {
 
 function command(cmd) {
     message(CONSOLE_PREFIX + cmd);
-    $('#textbox').val('');
+    document.getElementById('textbox').value = '';
 
     const found = commands.some(function(command) {
         if (!cmd.startsWith(command.name))
