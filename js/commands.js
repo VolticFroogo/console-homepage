@@ -54,7 +54,7 @@ function who() {
 }
 
 function github() {
-    messageURL('Check out my GitHub @VolticFroogo.', 'https://github.com/VolticFroogo');
+    message('Check out my GitHub <a target="_blank" href="https://github.com/VolticFroogo">@VolticFroogo</a>.');
     message('To take a look at some of my projects on here, try the \'projects\' command.', margins.BOTTOM);
 }
 
