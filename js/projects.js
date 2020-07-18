@@ -56,13 +56,11 @@ const projectList = [
 function projects() {
     message('Projects:', margins.BOTTOM);
 
-    projectList.forEach(function(project) {
+    projectList.forEach(project => {
         message('- ' + project.name + ': ' + project.description);
 
         if (project.source !== undefined)
-            project.source.forEach(function(source) {
-                messageURL(source.name + ' source code', source.url);
-            });
+            project.source.forEach(source => messageURL(source.name + ' source code', source.url));
         else
             message('Closed source :(');
 

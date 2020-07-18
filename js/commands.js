@@ -39,7 +39,7 @@ const commands = [
 function help() {
     message('Commands:', margins.BOTTOM);
 
-    commands.forEach(function(command) {
+    commands.forEach(command => {
        message('- ' + command.name + ': ' + command.description);
     });
 

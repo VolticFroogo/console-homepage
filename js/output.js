@@ -1,7 +1,7 @@
 function registerOptions() {
     const options = document.getElementById('options');
 
-    commands.forEach(function(command) {
+    commands.forEach(command => {
         let li = document.createElement('li');
         li.appendChild(document.createTextNode(command.name));
 

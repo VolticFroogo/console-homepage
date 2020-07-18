@@ -15,7 +15,7 @@ document.getElementById('textbox').addEventListener('keydown', event => {
     command(event.target.value);
 });
 
-document.getElementById('options').addEventListener('click', async (event) => {
+document.getElementById('options').addEventListener('click', async event => {
     if (!event.target.matches('li'))
         return;
 
@@ -45,7 +45,7 @@ function command(cmd) {
     message(CONSOLE_PREFIX + cmd);
     document.getElementById('textbox').value = '';
 
-    const found = commands.some(function(command) {
+    const found = commands.some(command => {
         if (!cmd.startsWith(command.name))
             return false;
 

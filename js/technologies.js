@@ -31,7 +31,7 @@ function technology() {
 
     message('My favourite technologies (which I know and frequently use):', margins.BOTTOM);
 
-    technologies.forEach(function(technology) {
+    technologies.forEach(technology => {
         message('- ' + technology.name + ': ' + technology.description);
     });
 

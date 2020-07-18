@@ -18,7 +18,7 @@ const contactMethods = [
 function contact() {
     message('Communication methods:', margins.BOTTOM);
 
-    contactMethods.forEach(function(method) {
+    contactMethods.forEach(method => {
         // Send message in format: 'name: value', but make the value an 'a' tag with href if href is defined.
         message(method.name + ': ' +
             (method.href === undefined ? method.value :
