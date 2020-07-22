@@ -14,20 +14,6 @@ const projectList = [
         ]
     },
     {
-        name: 'osmium forums',
-        description: 'The fastest and easiest forum service to use. Zero latency for getting updates on threads due to SPA and WebSockets with server push instead of client pull.',
-        source: [
-            {
-                name: 'API',
-                url: 'https://github.com/VolticFroogo/of-api',
-            },
-            {
-                name: 'Web',
-                url: 'https://github.com/VolticFroogo/of-web',
-            }
-        ]
-    },
-    {
         name: 'cryptopad',
         description: 'A cloud-synchronised, trustless security notepad app using AES-256 (CBC) alongside PBKDF2 on the client for true privacy.',
         source: [
@@ -40,6 +26,20 @@ const projectList = [
                 url: 'https://github.com/VolticFroogo/cryptopad-mobile',
             }
         ]
+    },
+    {
+        name: 'await-ws',
+        description: 'Simplify WebSockets by allowing you to await upon requests.',
+        source: [
+            {
+                name: 'Go',
+                url: 'https://github.com/VolticFroogo/await-ws-go',
+            },
+            {
+                name: 'Dart',
+                url: 'https://github.com/VolticFroogo/await-ws-dart',
+            }
+        ],
     },
     {
         name: 'console-homepage',
