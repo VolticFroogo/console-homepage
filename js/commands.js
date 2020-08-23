@@ -47,7 +47,7 @@ function help() {
 }
 
 function who() {
-    message('I am Harry (or Froogo), a software developer residing in The United Kingdom. ' +
+    message('I am Harry (or Froogo), a <span class="age"></span> year old software developer residing in The United Kingdom. ' +
         'If you\'re interested in the kind of technologies I use, try the \'technology\' command. ' +
         'As you can see with this site, I mostly make useless stuff. ' +
         'If you want to see some of my projects, try the \'projects\' command.', margins.BOTTOM);

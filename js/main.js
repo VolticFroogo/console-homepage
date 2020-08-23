@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia('(max-width: 767px)').matches)
         document.getElementById('textbox').readOnly = true;
 
+    requestAnimationFrame(updateAge);
+
     registerOptions();
     intro();
 });
