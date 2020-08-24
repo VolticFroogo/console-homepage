@@ -51,6 +51,8 @@ function who() {
         'If you\'re interested in the kind of technologies I use, try the \'technology\' command. ' +
         'As you can see with this site, I mostly make useless stuff. ' +
         'If you want to see some of my projects, try the \'projects\' command.', margins.BOTTOM);
+
+    updateAgeElements();
 }
 
 function github() {
