@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - 82:8080
+    restart: unless-stopped
+    container_name: console-homepage
+    image: console-homepage
