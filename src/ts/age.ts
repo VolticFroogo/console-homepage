@@ -1,12 +1,12 @@
 const dob = 1082678400000;
 const millisecondsInYear = 31536000000;
-let ageElements;
+let ageElements: HTMLCollectionOf<Element>;
 
-function updateAgeElements() {
+export function updateAgeElements(): void {
     ageElements = document.getElementsByClassName('age');
 }
 
-function updateAge() {
+export function updateAge(): void {
     if (ageElements !== undefined) {
         const age = ((new Date().getTime() - dob) / millisecondsInYear).toFixed(10);
 

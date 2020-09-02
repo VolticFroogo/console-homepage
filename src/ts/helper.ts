@@ -1,7 +1,7 @@
-function getRandomInt(min, max) {
+export function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
 
-function sleep(ms) {
+export function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

@@ -1,4 +1,13 @@
-const contactMethods = [
+import { message } from "./output";
+import { Margin } from "./model";
+
+class ContactMethod {
+    name: string;
+    value: string;
+    href?: string;
+}
+
+const contactMethods: ContactMethod[] = [
     {
         name: 'email',
         value: 'harry@froogo.co.uk',
@@ -15,8 +24,8 @@ const contactMethods = [
     },
 ];
 
-function contact() {
-    message('Communication methods:', margins.BOTTOM);
+export function contact(): void {
+    message('Communication methods:', Margin.BOTTOM);
 
     contactMethods.forEach(method => {
         // Send message in format: 'name: value', but make the value an 'a' tag with href if href is defined.
@@ -25,5 +34,5 @@ function contact() {
             '<a target="_blank" href="' + method.href + '">' + method.value + '</a>'));
     });
 
-    message(' ', margins.BOTTOM);
+    message(' ', Margin.BOTTOM);
 }

@@ -1,4 +1,18 @@
-const projectList = [
+import { message, messageURL } from "./output";
+import { Margin } from "./model";
+
+class Project {
+    name: string;
+    description: string;
+    source: Source[];
+}
+
+class Source {
+    name: string;
+    url: string;
+}
+
+const projectList: Project[] = [
     {
         name: 'duopoly',
         description: 'Online real-time Monopoly with a game creatable in one click.',
@@ -53,8 +67,8 @@ const projectList = [
     }
 ];
 
-function projects() {
-    message('Projects:', margins.BOTTOM);
+export function projects(): void {
+    message('Projects:', Margin.BOTTOM);
 
     projectList.forEach(project => {
         message('- ' + project.name + ': ' + project.description);
@@ -64,8 +78,8 @@ function projects() {
         else
             message('Closed source :(');
 
-        message(' ', margins.BOTTOM);
+        message(' ', Margin.BOTTOM);
     });
 
-    message('To find my GitHub with more of my projects, try the \'github\' command.', margins.BOTTOM);
+    message('To find my GitHub with more of my projects, try the \'github\' command.', Margin.BOTTOM);
 }
