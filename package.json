@@ -1,5 +1,11 @@
 {
 	"name": "console-homepage",
+	"description": "A clean homepage interfaced in a unique CLI style.",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/VolticFroogo/console-homepage.git"
+	},
+	"license": "UNLICENSED",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "rm -rf ./dist/* && webpack"
