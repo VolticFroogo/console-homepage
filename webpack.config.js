@@ -8,7 +8,7 @@ const
 module.exports = {
     entry: {
         app: './src/ts/index.ts',
-        styles: './src/css/main.css'
+        styles: './src/sass/index.sass'
     },
     mode: 'production',
     module: {
@@ -19,13 +19,13 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                test: /\.s[ac]ss$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             }
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.css'],
+        extensions: ['.tsx', '.ts', '.js', '.sass'],
     },
     output: {
         filename: '[name].[hash].js',
