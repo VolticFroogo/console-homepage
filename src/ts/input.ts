@@ -3,44 +3,43 @@ import { sleep } from "./helper";
 
 let typing = false;
 
-document.getElementById('textbox').addEventListener('blur', event => {
-    (<HTMLInputElement>event.target).focus();
-});
+export function registerListeners(): void {
+    document.getElementById('textbox').addEventListener('blur', event => {
+        (<HTMLInputElement>event.target).focus();
+    });
 
-document.getElementById('textbox').addEventListener('keydown', event => {
-    if (typing)
-        event.preventDefault();
+    document.getElementById('textbox').addEventListener('keydown', event => {
+        if (typing)
+            event.preventDefault();
 
-    // If they didn't press enter, return.
-    if (event.code !== 'Enter')
-        return;
+        // If they didn't press enter, return.
+        if (event.code !== 'Enter')
+            return;
 
-    command((<HTMLInputElement>event.target).value);
-});
+        command((<HTMLInputElement>event.target).value);
+    });
 
-document.getElementById('options').addEventListener('click', async event => {
-    if (!(<HTMLElement>event.target).matches('li'))
-        return;
+    document.getElementById('options').addEventListener('click', async event => {
+        if (typing || !(<HTMLElement>event.target).matches('li'))
+            return;
 
-    if (typing)
-        return;
+        typing = true;
 
-    typing = true;
+        const textbox = <HTMLInputElement>document.getElementById('textbox');
 
-    const textbox = <HTMLInputElement>document.getElementById('textbox');
+        while (textbox.value.length !== 0) {
+            textbox.value = textbox.value.slice(0, -1);
+            await sleep(50);
+        }
 
-    while (textbox.value.length !== 0) {
-        textbox.value = textbox.value.slice(0, -1);
-        await sleep(50);
-    }
+        const cmd = (<HTMLLIElement>event.target).innerText;
 
-    const cmd = (<HTMLLIElement>event.target).innerText;
+        for (let i = 0; i < cmd.length; i++) {
+            textbox.value += cmd[i];
+            await sleep(100);
+        }
 
-    for (let i = 0; i < cmd.length; i++) {
-        textbox.value += cmd[i];
-        await sleep(100);
-    }
-
-    command(cmd);
-    typing = false;
-});
+        command(cmd);
+        typing = false;
+    });
+}

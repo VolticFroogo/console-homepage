@@ -1,6 +1,7 @@
 import { updateAge } from './age';
 import { intro } from "./output";
 import { registerCommands } from "./commands";
+import { registerListeners } from "./input";
 
 document.addEventListener('DOMContentLoaded', () => {
     // If the user is on mobile, set the textbox to readonly.
@@ -10,5 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(updateAge);
 
     registerCommands();
+    registerListeners();
     intro();
 });
