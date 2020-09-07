@@ -25,25 +25,51 @@ a
 
         transform: translate(-50%, -60%)
 
-#messages
-    margin: 0
-    padding: 0
-    max-height: 60vh
-    overflow-y: auto
+    #messages
+        margin: 0
+        padding: 0
+        max-height: 60vh
+        overflow-y: auto
 
-    @media (max-width: 1200px)
-        max-height: 70vh
+        @media (max-width: 1200px)
+            max-height: 70vh
 
-    li
-        list-style: none
+        li
+            list-style: none
+            font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace
+            font-size: 15px
+
+            &.marginTop
+                margin-top: 15px
+
+            &.marginBottom
+                margin-bottom: 15px
+
+    #textbox
+        width: calc(100% - 30px)
+        margin: 0
+        padding: 0
+
+        background: none
+        border: none
+        outline: none
+
+        color: $primary
         font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace
         font-size: 15px
 
-        &.marginTop
-            margin-top: 15px
+    #options
+        margin: 15px 0 0 0
+        padding: 0
 
-        &.marginBottom
-            margin-bottom: 15px
+        li
+            margin: 0 0 10px 15px
+            padding: 5px
+            list-style: none
+            color: $secondary
+            background-color: $primary
+            float: left
+            cursor: pointer
 
 /* Custom scrollbar */
 ::-webkit-scrollbar
@@ -54,29 +80,3 @@ a
 
 ::-webkit-scrollbar-thumb
     background: $primary
-
-#textbox
-    width: calc(100% - 30px)
-    margin: 0
-    padding: 0
-
-    background: none
-    border: none
-    outline: none
-
-    color: $primary
-    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace
-    font-size: 15px
-
-#options
-    margin: 15px 0 0 0
-    padding: 0
-
-    li
-        margin: 0 0 10px 15px
-        padding: 5px
-        list-style: none
-        color: $secondary
-        background-color: $primary
-        float: left
-        cursor: pointer
