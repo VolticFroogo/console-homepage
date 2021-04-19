@@ -1,5 +1,5 @@
 const dob = 1082678400000;
-const millisecondsInYear = 31536000000;
+const millisecondsInYear = 31557600000;
 let ageElements: HTMLCollectionOf<Element>;
 
 export function updateAgeElements(): void {
