@@ -15,7 +15,7 @@ const contactMethods: ContactMethod[] = [
     },
     {
         name: 'discord',
-        value: 'Froogo#5239',
+        value: 'Froogo#8004',
     },
     {
         name: 'steam',
